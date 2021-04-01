@@ -1,0 +1,6 @@
+framework module Pods_itunesClone_itunesCloneUITests {
+  umbrella header "Pods-itunesClone-itunesCloneUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
