@@ -7,6 +7,10 @@ target 'itunesClone' do
 
   # Pods for itunesClone
 
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+
   target 'itunesCloneTests' do
     inherit! :search_paths
     # Pods for testing
