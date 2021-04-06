@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct MusicObject: Decodable {
+struct MusicObject: Codable {
     let wrapperType: String
     let collectionType: String
     let artistId: Int
@@ -31,7 +31,7 @@ struct MusicObject: Decodable {
     let primaryGenreName: String
 }
 
-struct URLResult: Decodable {
+struct URLResult: Codable {
     let resultCount: Int
     let results: [MusicObject]
 }

@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import Kingfisher
 
 class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     private let itunes_url_path : String = "https://itunes.apple.com/search?term=jack+johnson&entity=album"
-    private var music_result : [MusicObject] = []
+    var music_list = MusicList()
+    var bookmark_list = BookmarkList()
     var collectionView : UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
                 layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
@@ -21,10 +21,6 @@ class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionV
         return cv
     }()
     
-    var music_list = MusicList()
-    var bookmark_list = BookmarkList()
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         music_list.addObservers(observers: bookmark_list)
@@ -36,19 +32,16 @@ class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionV
         super.viewWillAppear(animated)
         self.title = "Itunes clone"
         navigationItem.largeTitleDisplayMode = .always
-        
-    }
-    
-    func createView(){
-        self.title = "itunes clone"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
         let rightButton = UIBarButtonItem(
-          title:"Bookmark Items",
+            title:String(format: "Bookmark: %i", bookmark_list.song_list.count),
             style:.plain,
             target:self,
             action:#selector(ViewController.bookmark))
         self.navigationItem.rightBarButtonItem = rightButton
+    }
+    
+    func createView(){
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib.init(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCollectionViewCell")
@@ -102,7 +95,8 @@ class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.music_list.sendNotifications(item: self.music_list.song_list[indexPath.row].collectionName)
+        self.music_list.addCollectionToObserver(obj: self.music_list.song_list[indexPath.row])
+        self.navigationItem.rightBarButtonItem?.title = String(format: "Bookmark: %i", bookmark_list.song_list.count)
     }
     
     func switchToLargeImage(path url:String) -> String {
@@ -110,8 +104,10 @@ class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionV
     }
     
     @objc func bookmark() {
+        let bvc = BookmarkViewController()
+        bvc.setList(MusicList: bookmark_list.song_list)
         self.navigationController?.pushViewController(
-            BookmarkViewController(), animated: true)
+            bvc, animated: true)
     }
     
 }

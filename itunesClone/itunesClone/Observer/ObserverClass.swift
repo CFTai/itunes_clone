@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Observer:class {
-    func notify(item:String)
+    func addCollection(Song obj: MusicObject)
 }
  
 protocol Subject {
@@ -26,9 +26,10 @@ class SubjectBase: Subject {
     func removeObserver(observer:Observer) {
         self.observers = self.observers.filter{ $0 !== observer }
     }
-    func sendNotifications(item:String) {
+    
+    func addCollectionToObserver(obj: MusicObject){
         for observer in observers {
-            observer.notify(item: item)
+            observer.addCollection(Song: obj)
         }
     }
 }
@@ -36,19 +37,21 @@ class SubjectBase: Subject {
 class MusicList: SubjectBase{
     var song_list : [MusicObject] = []
     
-    func addToBookMark(item:String){
-        sendNotifications(item: item)
-    }
 }
 
 class BookmarkList:Observer {
-    
     var song_list : [MusicObject] = []
-    func notify(item: String) {
-        ItemAddedToBookmark(item: item)
+    func addCollection(Song obj: MusicObject) {
+        addCollectionToObserver(Song: obj)
     }
-    func ItemAddedToBookmark(item:String) {
-        print("Item add to BookMark \(item)")
+    
+    func addCollectionToObserver(Song obj: MusicObject) {
+        if let index = song_list.firstIndex(where: {$0.collectionId == obj.collectionId}) {
+            song_list.remove(at: index)
+        } else {
+            song_list.append(obj)
+        }
     }
 }
+
 
