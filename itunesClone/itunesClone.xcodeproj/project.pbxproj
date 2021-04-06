@@ -16,11 +16,14 @@
 		451EAF12261565250002CC3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451EAF10261565250002CC3D /* LaunchScreen.storyboard */; };
 		451EAF1D261565250002CC3D /* itunesCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EAF1C261565250002CC3D /* itunesCloneTests.swift */; };
 		451EAF28261565250002CC3D /* itunesCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EAF27261565250002CC3D /* itunesCloneUITests.swift */; };
-		4522009F26158E1100DEAC0F /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4522009E26158E1100DEAC0F /* MusicViewModel.swift */; };
 		455BB78026156803003CE262 /* ObserverClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BB77F26156803003CE262 /* ObserverClass.swift */; };
 		455BB78F2615702E003CE262 /* ItunesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BB78E2615702E003CE262 /* ItunesItem.swift */; };
 		D48684AF768C1AB079658F0C /* Pods_itunesClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC17238F41EDE10CEE963E9 /* Pods_itunesClone.framework */; };
 		DD0E5E0478BB8D60BF857B9A /* Pods_itunesClone_itunesCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15865EEA9CDB1A582573BB4 /* Pods_itunesClone_itunesCloneUITests.framework */; };
+		E45F6A22261BAF35007846A3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45F6A20261BAF35007846A3 /* CustomCollectionViewCell.swift */; };
+		E45F6A23261BAF35007846A3 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45F6A21261BAF35007846A3 /* CustomCollectionViewCell.xib */; };
+		E45F6A28261BB531007846A3 /* customLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45F6A27261BB531007846A3 /* customLabel.swift */; };
+		E45F6A35261C24EB007846A3 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45F6A34261C24EB007846A3 /* BookmarkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,6 @@
 		451EAF23261565250002CC3D /* itunesCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itunesCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		451EAF27261565250002CC3D /* itunesCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesCloneUITests.swift; sourceTree = "<group>"; };
 		451EAF29261565250002CC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4522009E26158E1100DEAC0F /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
 		455BB77F26156803003CE262 /* ObserverClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverClass.swift; sourceTree = "<group>"; };
 		455BB78E2615702E003CE262 /* ItunesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesItem.swift; sourceTree = "<group>"; };
 		4FC17238F41EDE10CEE963E9 /* Pods_itunesClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunesClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,10 @@
 		8F641D6042E4C602E6F98705 /* Pods-itunesCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-itunesCloneTests/Pods-itunesCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A54426210A038FE06E7B3F0 /* Pods-itunesClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesClone.release.xcconfig"; path = "Target Support Files/Pods-itunesClone/Pods-itunesClone.release.xcconfig"; sourceTree = "<group>"; };
 		D15865EEA9CDB1A582573BB4 /* Pods_itunesClone_itunesCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunesClone_itunesCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45F6A20261BAF35007846A3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		E45F6A21261BAF35007846A3 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		E45F6A27261BB531007846A3 /* customLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLabel.swift; sourceTree = "<group>"; };
+		E45F6A34261C24EB007846A3 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		FB12F04AC4576048BEE7980A /* Pods-itunesClone-itunesCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesClone-itunesCloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-itunesClone-itunesCloneUITests/Pods-itunesClone-itunesCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				4522009D26158DFA00DEAC0F /* View */,
-				4522009626158DE200DEAC0F /* ViewModel */,
 				455BB78D26157015003CE262 /* Model */,
 				455BB77E261567D3003CE262 /* Observer */,
 				451EAF02261565230002CC3D /* AppDelegate.swift */,
@@ -154,18 +159,14 @@
 			path = itunesCloneUITests;
 			sourceTree = "<group>";
 		};
-		4522009626158DE200DEAC0F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4522009E26158E1100DEAC0F /* MusicViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		4522009D26158DFA00DEAC0F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				451EAF06261565230002CC3D /* ViewController.swift */,
+				E45F6A20261BAF35007846A3 /* CustomCollectionViewCell.swift */,
+				E45F6A21261BAF35007846A3 /* CustomCollectionViewCell.xib */,
+				E45F6A27261BB531007846A3 /* customLabel.swift */,
+				E45F6A34261C24EB007846A3 /* BookmarkViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451EAF12261565250002CC3D /* LaunchScreen.storyboard in Resources */,
+				E45F6A23261BAF35007846A3 /* CustomCollectionViewCell.xib in Resources */,
 				451EAF0F261565250002CC3D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,12 +449,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				451EAF07261565230002CC3D /* ViewController.swift in Sources */,
+				E45F6A22261BAF35007846A3 /* CustomCollectionViewCell.swift in Sources */,
 				451EAF0D261565230002CC3D /* itunesClone.xcdatamodeld in Sources */,
-				4522009F26158E1100DEAC0F /* MusicViewModel.swift in Sources */,
 				451EAF03261565230002CC3D /* AppDelegate.swift in Sources */,
 				451EAF05261565230002CC3D /* SceneDelegate.swift in Sources */,
 				455BB78F2615702E003CE262 /* ItunesItem.swift in Sources */,
 				455BB78026156803003CE262 /* ObserverClass.swift in Sources */,
+				E45F6A35261C24EB007846A3 /* BookmarkViewController.swift in Sources */,
+				E45F6A28261BB531007846A3 /* customLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
