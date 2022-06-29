@@ -21,7 +21,7 @@ struct MusicObject: Codable {
     let collectionViewUrl: String
     let artworkUrl60: String
     let artworkUrl100: String
-    let collectionPrice: Float
+    let collectionPrice: Float?
     let collectionExplicitness: String
     let trackCount: Int
     let copyright: String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Observer:class {
+protocol Observer:AnyObject {
     func addCollection(Song obj: MusicObject)
 }
  

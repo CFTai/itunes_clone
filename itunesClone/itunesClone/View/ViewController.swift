@@ -14,9 +14,9 @@ class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionV
     var bookmark_list = BookmarkList()
     var collectionView : UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-                layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-                layout.itemSize = CGSize(width: 60, height: 60)
-                
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        layout.itemSize = CGSize(width: 60, height: 60)
+        
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return cv
     }()
@@ -78,18 +78,22 @@ class ViewController: UIViewController,  UICollectionViewDelegate, UICollectionV
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         let item_image = URL(string: switchToLargeImage(path: self.music_list.song_list[indexPath.row].artworkUrl60))
         let data = try? Data(contentsOf: item_image!)
-        cell.bg_iv.image = UIImage(data: data!)
+        if(UIImage(data: data!) != nil){
+            cell.bg_iv.image = UIImage(data: data!)!
+        } else {
+            cell.bg_iv.image = UIImage(named: "DefaultImage")!
+        }
         cell.collection_lb.text = self.music_list.song_list[indexPath.row].collectionName
         return cell
     }
     
     // Setup item per row
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let noOfCellsInRow = 2
+        let noOfCellsInRow = 1
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let totalSpace = flowLayout.sectionInset.left
-            + flowLayout.sectionInset.right
-            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+        + flowLayout.sectionInset.right
+        + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
         return CGSize(width: size, height: size)
     }
